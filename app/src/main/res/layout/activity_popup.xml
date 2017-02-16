@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="300sp"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    android:background="@color/btnSelected">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="48sp"
+        android:background="@color/medicionNombreBg"
+        android:text="NUEVO DRIVE TEST"
+        android:gravity="center"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="15sp"
+        android:text="Guardar como:"
+        android:layout_below="@+id/title"
+        android:gravity="center"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/drivetestName"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_below="@+id/title2"/>
+
+    <TextView
+        android:id="@+id/btnCrear"
+        android:layout_marginTop="15sp"
+        android:layout_below="@id/drivetestName"
+        android:layout_width="wrap_content"
+        android:layout_height="48sp"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/center"
+        android:text="Guardar"
+        android:gravity="center"
+        android:background="@drawable/btnstates"
+        android:layout_margin="5sp"
+        />
+
+    <TextView
+        android:id="@+id/btnCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/center"
+        android:layout_alignParentRight="true"
+        android:text="Cancelar"
+        android:layout_alignTop="@+id/btnCrear"
+        android:layout_alignBottom="@+id/btnCrear"
+        android:gravity="center"
+        android:background="@drawable/btnstates"
+        android:layout_marginRight="5sp"
+        />
+
+    <View
+        android:id="@+id/center"
+        android:layout_width="1dip"
+        android:layout_height="1dip"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

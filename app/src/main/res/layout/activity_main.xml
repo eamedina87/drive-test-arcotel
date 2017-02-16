@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--
+    <org.osmdroid.views.MapView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/openmap"
+        android:layout_toRightOf="@+id/menu"
+        ></org.osmdroid.views.MapView>
+    -->
+
+
+
+    <TextView
+        android:id="@+id/btnDrive"
+        android:layout_width="195sp"
+        android:layout_height="48sp"
+        android:layout_alignParentLeft="true"
+        android:text="Drive Test"
+        android:gravity="center"
+        android:background="@drawable/btnstates"
+        android:layout_margin="2sp"
+        />
+
+
+    <TextView
+        android:id="@+id/btnHistory"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnDrive"
+        android:layout_alignTop="@+id/btnDrive"
+        android:layout_toRightOf="@+id/btnDrive"
+        android:text="Historial"
+        android:gravity="center"
+        android:background="@drawable/btnstates"
+        android:layout_marginRight="2sp"
+        android:visibility="gone"
+        />
+
+    <FrameLayout
+        android:layout_width="200sp"
+        android:layout_height="fill_parent"
+        android:id="@+id/menu"
+        android:layout_below="@id/btnDrive"></FrameLayout>
+
+    <fragment
+         android:layout_width="match_parent"
+        android:layout_height="match_parent" android:id="@+id/map" tools:context=".MainActivity"
+        android:layout_toRightOf="@+id/menu"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+
+    <TextView
+        android:id="@+id/mapTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textAppearance="@style/MyHistorialTitle"
+        android:padding="10sp"
+        android:background="@color/medicionNombreBg"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:layout_width="195sp"
+        android:layout_height="50sp"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/logo_arcotel"
+        android:id="@+id/logo"
+        android:layout_alignLeft="@+id/map"/>
+
+</RelativeLayout>

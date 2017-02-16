@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200sp"
+    android:layout_height="match_parent"
+    android:id="@+id/menu">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nombre"
+        android:layout_above="@+id/linearLayout">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSenal"
+
+                android:checked="true"
+                android:textOn="Señal"
+                android:layout_centerHorizontal="true"
+                android:textOff="Sin Señal"/>
+
+            <TextView
+                android:id="@+id/intervaloTxt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Intervalo:"
+                android:layout_below="@+id/btnSenal"
+                android:paddingLeft="3sp"
+                />
+
+
+            <RadioGroup
+                android:id="@+id/intervalo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/intervaloTxt"
+                android:checkedButton="@+id/btnTiempo">
+
+                <RadioButton
+                    android:id="@+id/btnTiempo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tiempo"/>
+
+                <RadioButton
+                    android:id="@+id/btnDistancia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Distancia"/>
+
+            </RadioGroup>
+
+            <SeekBar
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/intervaloBar"
+                android:layout_below="@+id/intervalo"
+                android:layout_centerHorizontal="true"
+                android:progress="50"
+                />
+
+            <TextView
+                android:id="@+id/intervaloCantidad"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="3sp"
+                android:gravity="center"
+                android:text="10 segundos"
+                android:layout_below="@+id/intervaloBar"
+                android:layout_marginBottom="10sp"
+                />
+
+            <TextView
+                android:id="@+id/zonaTxt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="3sp"
+                android:text="Zona:"
+                android:layout_below="@+id/intervaloCantidad"
+                android:layout_marginBottom="10sp"
+                />
+
+            <Spinner
+                android:id="@+id/zona"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/zonaTxt"
+                android:layout_marginBottom="5sp"
+                />
+
+            <TextView
+                android:id="@+id/fechaInicio"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="10-Mar 05h00"
+                android:layout_below="@+id/zona"
+                android:paddingLeft="3sp"
+                />
+
+            <TextView
+                android:id="@+id/fechaFin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="10-Mar 05h00"
+                android:layout_below="@+id/fechaInicio"
+                android:paddingLeft="3sp"
+                />
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    <TextView
+        android:id="@+id/nombreTxt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="Nombre de Medición:"
+        android:paddingLeft="3sp"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nombreTxt"
+        android:textAppearance="@style/MyHistorialTitle"
+        android:paddingLeft="5sp"
+        android:text="Nombre"
+        android:id="@+id/nombre"
+        android:layout_marginBottom="5sp"/>
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48sp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/btnStart"
+            android:layout_width="25sp"
+            android:layout_height="fill_parent"
+            android:text="Empezar"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@color/primary_material_light"
+            android:layout_margin="2sp"/>
+
+        <TextView
+            android:id="@+id/btnPause"
+            android:layout_width="25sp"
+            android:layout_height="fill_parent"
+            android:text="Pausa"
+            android:gravity="center"
+            android:background="@color/primary_material_light"
+            android:layout_weight="1"
+            android:layout_margin="2sp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/btnStop"
+            android:layout_width="25sp"
+            android:layout_height="fill_parent"
+            android:text="Terminar"
+            android:gravity="center"
+            android:background="@color/primary_material_light"
+            android:layout_weight="1"
+            android:layout_margin="2sp"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="btnPressed">@color/azul_oscuro</color>
+    <color name="btnEnabled">@color/azul_medio</color>
+    <color name="btnDisabled">@color/gris_medio</color>
+    <color name="btnSelected">@color/azul_claro</color>
+    <color name="historialNombre">#f00</color>
+    <color name="medicionBg">#ff0</color>
+    <color name="medicionNombreBg">#fff</color>
+
+    <color name="azul_oscuro">#03406b</color>
+    <color name="azul_medio">#026ab3</color>
+    <color name="azul_claro">#abd4f1</color>
+
+    <color name="gris_oscuro">#6e7072</color>
+    <color name="gris_medio">#94989a</color>
+    <color name="gris_claro">#cdcfd0</color>
+
+</resources>
